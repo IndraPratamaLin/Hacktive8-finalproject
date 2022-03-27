@@ -1,0 +1,71 @@
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.2)), url('../images/adrien-olichon-bg.jpg') center no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
+
+.section-1-heading {
+  font-size: 7.5rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #4085e6;
+  padding: 0 3rem;
+  margin: 5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  border-bottom: 0.3rem solid #fff;
+  text-shadow: 0.2rem 0.2rem 1rem #555;
+  transform: skew(-10deg);
+}
+
+.person-img {
+  width: 30rem;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.7rem dotted #63a4ff;
+  background-color: rgba(255,255,255,0.7);
+  margin: 1rem 0;
+  padding: 0.5rem;
+  opacity: 0.9;
+}
+
+.person-name {
+  font-size: 4rem;
+  color: #fff;
+  background-color: #4085e6;
+  margin: 5rem 0;
+  padding: 0.5rem 3rem;
+  letter-spacing: 0.3rem;
+  transform: skew(-10deg);
+  cursor: pointer;
+}
+
+.person-name:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem (#000, 0.2);
+}
+
+.person-name:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.person-name.animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
